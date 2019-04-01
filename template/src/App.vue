@@ -6,9 +6,8 @@
     </div> -->
     <router-view/>
     <van-tabbar v-model="active" class="footbar" v-if="isShowFoot">
-      <van-tabbar-item icon="g" :to="{name: 'home'}" >home</van-tabbar-item>
-      <van-tabbar-item icon="dzhuanhuan" :to="{name: 'list'}">list</van-tabbar-item>
-      <van-tabbar-item icon="guize" :to="{name: 'add'}">add</van-tabbar-item>
+    	<van-tabbar-item icon="yemian-copy" :to="{name: 'Home'}" >首页</van-tabbar-item>
+    	<van-tabbar-item icon="wode" :to="{name: 'UserIndex'}">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

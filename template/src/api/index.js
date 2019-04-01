@@ -18,7 +18,7 @@ export function joinTeam(data) {
     })
 }
 
-export function findAllTeam(params) {
+export function findList(params) {
     return request({
         url: '/students/findStudnetsLabels',
         params:params,

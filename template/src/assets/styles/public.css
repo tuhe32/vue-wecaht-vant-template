@@ -11,7 +11,7 @@ body{
   	-moz-osx-font-smoothing: grayscale;
   	text-align: center;
   	line-height: 1;
-    background-color: #eef1ef;
+    background-color: #f2f2f2;
     box-sizing: border-box;
 }
 ul,li,ol,dl,dt,dd{margin: 0; padding: 0; list-style: none;}
@@ -23,44 +23,10 @@ input::-webkit-input-placeholder{color: #ccc;}
 }
 
 /*reset*/
-.van-nav-bar{
-	background: #3ecd59!important;
-}
-.van-nav-bar .van-icon{
-	color: #fff!important;
-}
-.van-nav-bar__title{
-	color: #fff!important;
-}
-.van-nav-bar__right{
-	top:-0.2rem;
-}
-.van-nav-bar__right .van-icon{
-	font-size: 1.2rem;
-}
-.van-nav-bar--fixed{
-	z-index: 1000!important;
-}
-
-.van-button{
-	border-radius: 0.4rem!important;
-}
 .van-button--cyan{
 	background: #2BB89A; 
 	border: 0;
 	color: #fff;
-	font-size: 1rem!important;
-}
-.van-button--green{
-	background: #3ecd59; 
-	border: 0;
-	color: #fff;
-	font-size: 1rem!important;
-}
-.van-button--white{
-	background: #fff; 
-	border: 0;
-	color: #3ecd59;
 	font-size: 1rem!important;
 }
 .van-button--plain{
@@ -89,53 +55,46 @@ input::-webkit-input-placeholder{color: #ccc;}
 .van-tabs .van-tabs__line{
 	background-color:#2bb89a;
 }
-.van-hairline--top-bottom::after{
-	display: none;
+.van-tabs__nav{
+	justify-content: flex-start;
 }
-
-.van-cell__title, .van-cell__value{
-	text-align: left;
-	font-size: 0.8rem;
+.van-tabs .van-tab{
+	flex:auto !important;
+	font-size: 0.95rem !important;
+	min-width: auto !important;
+	padding: 0 0.5rem !important;
 }
-.van-field__control{
-	font-size: 0.8rem;
-	text-align: right;
-	line-height: 2;
+.van-tabs .van-tab--active{
+	font-size:1rem !important;
+	color: #1a1a1a;
+	font-weight: bold;
 }
-.team .van-field__control{
-	text-align: left;
+.van-tabs .van-tab .van-ellipsis{
 }
 
 #nprogress .bar{
-	background: #3ecd59
+	background: #39B799
 }
 
 .mt7{margin-top: 0.7rem;}
 
 .floatIcon{
 	position:fixed;
-	bottom:4rem;
+	bottom: 2rem;
 	right: 1rem;
 	width: 3.5rem;
 	height:3.5rem;
 	overflow: hidden;
-	line-height:1.2rem;
-	background: #3ecd59;
+	line-height:4.2rem;
+	background: #fff;
 	border-radius: 100%;
 	box-shadow:0 0 2rem rgba(0,0,0,0.2);
 }
-.floatIcon span{
-	font-size:0.9rem;
-	color: #fff;
-	display: inline-block;
-	margin-top:0.6rem;
-	
+.floatIcon i{
+	font-size:2rem;
+	color: #2BB89A;
 }
 /*footbar*/
-.footbar{
-	z-index: 10;
-	border-top:0.05rem #eeeeee solid;
-}
 .footbar .van-tabbar-item{
 	font-size: 0.75rem;
 }
@@ -144,8 +103,70 @@ input::-webkit-input-placeholder{color: #ccc;}
 	margin-bottom: 0.5rem;
 }
 .footbar .van-tabbar-item{color: #999;}
-.footbar .van-tabbar-item--active{color:#3ecd59;}
+.footbar .van-tabbar-item--active{color:#2BB89A;}
 
+/*bookItem*/
+.bookItem {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 0.5rem 0 0.8rem 0;
+	text-align: left;
+	display: flex;
+	align-content: flex-start;
+	justify-content: space-between;
+	color: #333;
+}
+	
+.bookItem  .list_l {
+	width:25%;
+}
+	
+.bookItem .list_l img {
+	width: 100%;
+	display: block;
+	border-radius: 0.1rem;
+}
+
+.bookItem .list_r {
+	width: 71%;
+}
+
+.bookItem .list_r h3 {
+	height: 2rem;
+	line-height: 1.5rem;
+	overflow: hidden;
+	font-size: 1.1rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #3b3b3b;
+}
+	
+.bookItem .list_r p {
+	line-height: 1.2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	font-size: 0.9rem;
+	color: #919191;
+	margin: 0.3rem 0 1.2rem 0;
+}
+	
+.bookItem .list_r span {
+	color: #919191;
+	font-size: 0.9rem;
+}
+.bookItem .list_r em {
+	float: right;
+	font-style: normal;
+	color: #919191;
+	font-size: 0.9rem;
+}
+.bookItem .list_r em .van-icon{
+	color: #aaa;
+}
 
 /*uploadBox*/
 .uploadBox{
@@ -214,84 +235,4 @@ input::-webkit-input-placeholder{color: #ccc;}
 	overflow-x:hidden;
   	overflow-y:auto;
  	background-color: #f7f7f7;
-}
-
-.boxTit{height: auto; overflow: hidden; padding:0.5rem; display: flex; flex-direction: row; align-items: center; justify-content:center; text-align: center;}
-.boxTit h1{margin: 0 0.5rem; color: #3ecd59; font-size:1.2rem;}
-.boxTit img{width: 13%;}
-.boxTit1{height: auto; overflow: hidden; padding:0.5rem; display: flex; flex-direction: row; align-items: center; justify-content:center; text-align: center;}
-.boxTit1 h1{margin: 0 0.5rem; color: #fff; font-size:1.2rem; line-height: 1.5rem;}
-.boxTit1 img{width: 13%;}
-.boxCon{ height: auto; overflow: hidden; padding:1rem 1.5rem;text-align: left;}
-.boxCon p{font-size:1rem; line-height: 1.8rem; color: #333;}
-.boxCon p span{color: #009530;}
-.boxCon h3{color: #009530; margin: 1rem 0; line-height: 1.5;}
-.stit{
-	font-size:1rem;
-	color: #666;
-	line-height: 1.5rem;
-	margin:0.5rem 0 1rem 0;
-}
-.stit span{
-	color: #009530;
-}
-
-.van-tabs{}
-.van-tabs__nav{justify-content: space-between;}
-.van-tabs__nav--card{height: auto; border: 0; margin: 0; }
-.van-tabs--card>.van-tabs__wrap{height: auto;}
-.van-tabs__nav--card .van-tab.van-tab--active{
-	background: none;
-}
-.van-tabs__nav .van-tab{
-	background: none;
-	border: 0;
-}
-.van-tabs__nav .van-tab .tit{
-	height:4rem;
-	line-height: 4rem;
-	overflow: hidden;
-	text-align: left;
-	color:#009926;
-	display: flex;
-	align-items: center;
-}
-.van-tabs__nav .van-tab .tit h4{
-	font-size:1rem;
-	height: auto;
-	overflow: hidden;
-	margin:0 0 0 3.5rem;
-	line-height: 1.5rem;
-}
-.van-tabs__nav .van-tab .tabtit1{
-	background:#ddf1de url(../images/tab_icon3.png) no-repeat left center;
-	background-size:auto 80%;
-}
-.van-tabs__nav .van-tab--active .tabtit1{
-	background:#53ba59 url(../images/tab_icon3a.png) no-repeat left center;
-	background-size:auto 80%;
-	color: #fff;
-}
-.van-tabs__nav .van-tab .tabtit2{
-	background:#ddf1de url(../images/tab_icon1.png) no-repeat left center;
-	background-size:auto 80%;
-}
-.van-tabs__nav .van-tab--active .tabtit2{
-	background:#53ba59 url(../images/tab_icon1a.png) no-repeat left center;
-	background-size:auto 80%;
-	color: #fff;
-}
-
-
-
-
-.carousel-3d-controls a{
-	background:rgba(0,0,0,0.3);
-	border-radius: 100%;
-	text-align: center !important;
-	line-height:40px !important;
-}
-.carousel-3d-controls a span{
-	color: #fff;
-	font-size:3rem;
 }

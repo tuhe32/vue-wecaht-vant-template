@@ -1,5 +1,5 @@
 import wx from 'weixin-js-sdk'
-import {getJssdk} from '@/api/home'
+import {getJssdk} from '@/api/weixin'
 import qUtil from "@/utils/queryUtil";
 // import axios from '@/components/config/http'
 
