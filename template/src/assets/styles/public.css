@@ -1,0 +1,297 @@
+html{
+	width: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	width: 100%;
+	height: 100%;
+	font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
+   	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	text-align: center;
+  	line-height: 1;
+    background-color: #eef1ef;
+    box-sizing: border-box;
+}
+ul,li,ol,dl,dt,dd{margin: 0; padding: 0; list-style: none;}
+h3,p{margin: 0; padding: 0;}
+input::-webkit-input-placeholder{color: #ccc;}
+#app{
+	width: 100%;
+	height: 100%;
+}
+
+/*reset*/
+.van-nav-bar{
+	background: #3ecd59!important;
+}
+.van-nav-bar .van-icon{
+	color: #fff!important;
+}
+.van-nav-bar__title{
+	color: #fff!important;
+}
+.van-nav-bar__right{
+	top:-0.2rem;
+}
+.van-nav-bar__right .van-icon{
+	font-size: 1.2rem;
+}
+.van-nav-bar--fixed{
+	z-index: 1000!important;
+}
+
+.van-button{
+	border-radius: 0.4rem!important;
+}
+.van-button--cyan{
+	background: #2BB89A; 
+	border: 0;
+	color: #fff;
+	font-size: 1rem!important;
+}
+.van-button--green{
+	background: #3ecd59; 
+	border: 0;
+	color: #fff;
+	font-size: 1rem!important;
+}
+.van-button--white{
+	background: #fff; 
+	border: 0;
+	color: #3ecd59;
+	font-size: 1rem!important;
+}
+.van-button--plain{
+	background: #fff;
+}
+.van-button--cyan.van-button--plain{
+	border:0.01rem #2BB89A solid !important;
+	color: #2BB89A;
+}
+.van-button--cyan_light{
+	background: #ecf5f2; 
+	border: 0;
+}
+.van-button--gray{
+	background: #8F8E8E; 
+	border: 0;
+	color: #fff;
+	font-size: 1rem!important;
+}
+.van-checkbox__icon--checked .van-icon{
+	border-color: #ffffff !important;
+    background-color: #2BB89A !important;
+}
+
+
+.van-tabs .van-tabs__line{
+	background-color:#2bb89a;
+}
+.van-hairline--top-bottom::after{
+	display: none;
+}
+
+.van-cell__title, .van-cell__value{
+	text-align: left;
+	font-size: 0.8rem;
+}
+.van-field__control{
+	font-size: 0.8rem;
+	text-align: right;
+	line-height: 2;
+}
+.team .van-field__control{
+	text-align: left;
+}
+
+#nprogress .bar{
+	background: #3ecd59
+}
+
+.mt7{margin-top: 0.7rem;}
+
+.floatIcon{
+	position:fixed;
+	bottom:4rem;
+	right: 1rem;
+	width: 3.5rem;
+	height:3.5rem;
+	overflow: hidden;
+	line-height:1.2rem;
+	background: #3ecd59;
+	border-radius: 100%;
+	box-shadow:0 0 2rem rgba(0,0,0,0.2);
+}
+.floatIcon span{
+	font-size:0.9rem;
+	color: #fff;
+	display: inline-block;
+	margin-top:0.6rem;
+	
+}
+/*footbar*/
+.footbar{
+	z-index: 10;
+	border-top:0.05rem #eeeeee solid;
+}
+.footbar .van-tabbar-item{
+	font-size: 0.75rem;
+}
+.footbar .van-tabbar-item__icon{
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem;
+}
+.footbar .van-tabbar-item{color: #999;}
+.footbar .van-tabbar-item--active{color:#3ecd59;}
+
+
+/*uploadBox*/
+.uploadBox{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.uploadBox dt,.uploadBox dd{
+	width:5rem;
+	height: 5rem;
+	text-align: center;
+	margin:0 5% 1rem 0;
+	position: relative;
+	border-radius: 0.5rem;
+	border:0.05rem #DCDDDF solid;
+}
+.uploadBox dt .van-uploader{
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding-top: 0.6rem;
+}
+.uploadBox dt  .van-icon{
+	font-size:3rem;
+	color: #cccccc;
+}
+.uploadBox dt img, .uploadBox dd img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 0.5rem;
+}
+.uploadBox dd .van-icon{
+	position: absolute;
+	right: -0.5rem;
+	top: -0.5rem;
+	z-index: 10;
+	width:1.5rem;
+	height:1.5rem;
+	line-height: 1.5rem;
+	background: #2BB89A;
+	border:0.05rem #ffffff solid;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 0.8rem;
+}
+.router-slid-enter-active, .router-slid-leave-active {
+  transition: all .4s;
+}
+.router-slid-enter, .router-slid-leave-active {
+  transform: translate3d(2rem, 0, 0);
+  opacity: 0;
+}
+
+/*页面切换动画*/
+.floatPage{
+	position:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	overflow-x:hidden;
+  	overflow-y:auto;
+ 	background-color: #f7f7f7;
+}
+
+.boxTit{height: auto; overflow: hidden; padding:0.5rem; display: flex; flex-direction: row; align-items: center; justify-content:center; text-align: center;}
+.boxTit h1{margin: 0 0.5rem; color: #3ecd59; font-size:1.2rem;}
+.boxTit img{width: 13%;}
+.boxTit1{height: auto; overflow: hidden; padding:0.5rem; display: flex; flex-direction: row; align-items: center; justify-content:center; text-align: center;}
+.boxTit1 h1{margin: 0 0.5rem; color: #fff; font-size:1.2rem; line-height: 1.5rem;}
+.boxTit1 img{width: 13%;}
+.boxCon{ height: auto; overflow: hidden; padding:1rem 1.5rem;text-align: left;}
+.boxCon p{font-size:1rem; line-height: 1.8rem; color: #333;}
+.boxCon p span{color: #009530;}
+.boxCon h3{color: #009530; margin: 1rem 0; line-height: 1.5;}
+.stit{
+	font-size:1rem;
+	color: #666;
+	line-height: 1.5rem;
+	margin:0.5rem 0 1rem 0;
+}
+.stit span{
+	color: #009530;
+}
+
+.van-tabs{}
+.van-tabs__nav{justify-content: space-between;}
+.van-tabs__nav--card{height: auto; border: 0; margin: 0; }
+.van-tabs--card>.van-tabs__wrap{height: auto;}
+.van-tabs__nav--card .van-tab.van-tab--active{
+	background: none;
+}
+.van-tabs__nav .van-tab{
+	background: none;
+	border: 0;
+}
+.van-tabs__nav .van-tab .tit{
+	height:4rem;
+	line-height: 4rem;
+	overflow: hidden;
+	text-align: left;
+	color:#009926;
+	display: flex;
+	align-items: center;
+}
+.van-tabs__nav .van-tab .tit h4{
+	font-size:1rem;
+	height: auto;
+	overflow: hidden;
+	margin:0 0 0 3.5rem;
+	line-height: 1.5rem;
+}
+.van-tabs__nav .van-tab .tabtit1{
+	background:#ddf1de url(../images/tab_icon3.png) no-repeat left center;
+	background-size:auto 80%;
+}
+.van-tabs__nav .van-tab--active .tabtit1{
+	background:#53ba59 url(../images/tab_icon3a.png) no-repeat left center;
+	background-size:auto 80%;
+	color: #fff;
+}
+.van-tabs__nav .van-tab .tabtit2{
+	background:#ddf1de url(../images/tab_icon1.png) no-repeat left center;
+	background-size:auto 80%;
+}
+.van-tabs__nav .van-tab--active .tabtit2{
+	background:#53ba59 url(../images/tab_icon1a.png) no-repeat left center;
+	background-size:auto 80%;
+	color: #fff;
+}
+
+
+
+
+.carousel-3d-controls a{
+	background:rgba(0,0,0,0.3);
+	border-radius: 100%;
+	text-align: center !important;
+	line-height:40px !important;
+}
+.carousel-3d-controls a span{
+	color: #fff;
+	font-size:3rem;
+}
