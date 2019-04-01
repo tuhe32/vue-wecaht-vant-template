@@ -12,16 +12,16 @@ module.exports={
         name: {
             type: 'string',
             required: true,
-            message: '你得输入一个项目名',
+            message: '项目名是啥',
         },
         author: {
             type: 'string',
-            message: '你的名字是谁',
+            message: '你是谁啊',
         },
         description: {
             type: 'string',
             required: false,
-            message: 'Project description',
+            message: '描述一下项目吧，不写也行',
             default: '一个微信端的项目',
         },
         autoInstall: {
@@ -30,14 +30,14 @@ module.exports={
             '项目创建后，你必须得安一下包依赖，不懂就去百度',
           choices: [
             {
-              name: '好的, 用 NPM 安吧',
-              value: 'npm',
-              short: 'npm',
-            },
-            {
               name: 'OK,用 Yarn 安吧',
               value: 'yarn',
               short: 'yarn',
+            },
+            {
+              name: '好的, 用 NPM 安吧',
+              value: 'npm',
+              short: 'npm',
             },
             {
               name: '我舅不愿安，怎么着！',
