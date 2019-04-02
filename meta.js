@@ -64,9 +64,9 @@ module.exports={
             // .then(() => {
             //   return runLintFix(cwd, data, green)
             // })
-            .then(() => {
-              printMessage(data, green)
-            })
+            // .then(() => {
+            //   printMessage(data, green)
+            // })
             .then(() => {
               return cdAndRun(cwd,data,green)
             })
