@@ -5,6 +5,7 @@ const {
   installDependencies,
   runLintFix,
   printMessage,
+  cdAndRun
 } = require('./utils')
 
 module.exports={
@@ -63,8 +64,11 @@ module.exports={
             // .then(() => {
             //   return runLintFix(cwd, data, green)
             // })
+            // .then(() => {
+            //   printMessage(data, green)
+            // })
             .then(() => {
-              printMessage(data, green)
+              return cdAndRun(cwd,data,green)
             })
             .catch(e => {
               console.log(chalk.red('Error:'), e)
