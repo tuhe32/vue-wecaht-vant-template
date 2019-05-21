@@ -41,6 +41,9 @@ export default {
 		gotoBookDetail(id){
 			// this.$router.push({name: 'BookDetail',query:{id:id}})
 		},
+      	init() {
+
+		}
 	},
 	mounted(){
 
