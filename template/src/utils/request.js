@@ -4,10 +4,9 @@ import router  from '../router';
 import baseUtil from './baseUtil'
 
 // create an axios instance
-console.log('[process.env.NODE_ENV]',process.env.NODE_ENV)
-let baseUrl = process.env.NODE_ENV === 'production'?'http://127.0.0.1:9001':'http://192.168.2.115:9001'
+// console.log('[process.env.NODE_ENV]',process.env.NODE_ENV)
 const service = axios.create({
-  baseURL: baseUrl, // api的base_url
+  baseURL: process.env.VUE_APP_BASE_API, // api的base_url
   timeout: 30000, // request timeout
   method:'POST'
 })
@@ -61,7 +60,7 @@ service.interceptors.response.use(
         //   })
         // })
         store.dispatch('LogOut').then(() => {
-            router.go(0)
+          location.reload()
         })
         // baseUtil.removeStore('token')
         // baseUtil.removeStore('user')

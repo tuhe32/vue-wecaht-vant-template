@@ -3,6 +3,7 @@ const getters = {
   user: state => state.user.user,
   isShowFoot: state => state.user.isShowFoot,
   navbarTitle: state => state.user.navbarTitle,
-  direction: state => state.user.direction
+  direction: state => state.user.direction,
+  cachedViews: state => state.view.cachedView
 }
 export default getters

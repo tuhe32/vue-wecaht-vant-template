@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <keep-alive :include="cachedViews">
+        <router-view />
+    </keep-alive>
     <van-tabbar v-model="active" class="footbar" v-if="isShowFoot">
     	<van-tabbar-item icon="yemian-copy" :to="{name: 'Home'}" >首页</van-tabbar-item>
     	<van-tabbar-item icon="wode" :to="{name: 'UserIndex'}">我的</van-tabbar-item>
@@ -35,7 +37,10 @@
           else if(this.route.path == ('/add')) return 2
         },
         set:function() {}
-      }
+      },
+      cachedViews() {
+        return this.$store.state.view.cachedViews
+      },
     },
   }
 </script>
